@@ -1,0 +1,91 @@
+{% extends 'base_layout.html' %}
+{% load static from staticfiles %}
+    {% block content%}
+    
+    </div>
+
+    <div class= 'BlockContent'>
+        <h6>Likes & Comments</h6>
+        <div class="test">
+            <div class="likebox test">
+                <h>{{ likes }}</h>
+                <p class="smaller">
+                {% if likes > 1 %}
+                    Likes
+                {% else %}
+                    Like
+                {% endif %}
+                </p>
+                <form method="POST" action="{% url 'comment:like' %}">
+                    {% csrf_token %}
+                    <button type="submit" class='formbutton animation'>LIKE</button>
+                </form>
+                <p>
+                {% if likes > 0 %}
+                    {% for usr in first3like %} 
+                        {{ usr.username }}, 
+                    {% endfor %}
+                    {% if restlike >= 1 %}
+                        and {{ restlike }} other
+                    {% endif %}
+                    liked this Web
+                {% endif %}
+                </p>
+            </div>
+        </div>
+        <div><br><br>
+        <h6 class="justatext">Comments</h6>
+        {% for coment in comment %}
+            <div class="cmntbox">
+                <h3>{{ coment.username }}</h3>
+                <p class="date">{{ coment.created_at }}</p>
+                <p class="txt">{{ coment.comment }}</p>
+                <button class="hbutton hidebutt"  id="b{{ coment.id }}" onclick="Hide({{ coment.id }})">See Reply</button>
+                <div class='rplybox' id="{{ coment.id }}">
+                    {% for rply in coment.replies.all %}
+                        <div class='line'>
+                            <h3>{{ rply.username }}</h3>
+                            <p class="date">{{ rply.created_at }}</p>
+                            <p class="txt">{{ rply.reply_message }}</p>
+                        </div>
+                    {% endfor %}
+                    <form  method="POST" action="{% url 'comment:reply' comment_id=coment.id %}">
+                        {% csrf_token %}
+                        <div>
+                            {% for field in reply_form.visible_fields %}
+                                {{ field }}
+                            {% endfor %}
+                        </div>
+                        <button type="submit" class='submitbutton'>Reply</button>
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+        <div class="forme">
+            <form action="{% url 'comment:comment_create' %}" method="POST">
+                {% csrf_token %}
+                <div>
+                    {% for field in form.visible_fields %}
+                        <div>{{ field }}</div>
+                    {% endfor %}
+                    <button type="submit" class="submitbutton">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    function Hide(ID) {
+        if (document.getElementById(ID).style.display=="block") {
+            document.getElementById('b'+ID).innerHTML='See Reply';
+            document.getElementById(ID).style.display='none';
+        }
+
+        else {
+        document.getElementById('b'+ID).innerHTML='Hide Reply';
+        document.getElementById(ID).style.display='block';
+        }
+    }
+    </script>
+    {% endblock %}

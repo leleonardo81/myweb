@@ -1,0 +1,589 @@
+body { 
+    background-image: linear-gradient(rgb(105, 80, 80),rgb(105, 80, 80)),url("wpolygonal-abstract-red-dark-background-eo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll; 
+    background-size: cover;
+    background-blend-mode: multiply;
+    margin: 0px;
+}
+
+.picture {
+    width: 210px; 
+    height: 300px;
+    background-image: url("ME.jpg"),radial-gradient(rgba(0, 0, 0, 0.11) ,black 100%);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    border-radius: 100%;
+}
+
+.BlockContent {
+    padding-top: 80px;
+    color: white;
+    margin-bottom: 100px;
+    }
+
+.topnav {
+    overflow: hidden;
+    background-image: linear-gradient(rgb(27, 27, 27) 70%,rgb(0, 109, 5));
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;   
+    
+}
+  
+.topnav a {
+    float: right;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'arial Black';
+    transition: 0.5s;
+}
+
+.topnav a button {
+    color: #aaaaaa;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'arial Black';
+    margin: 0;
+    padding: 0;
+}
+  
+.topnav a:hover {
+    background-image: linear-gradient( rgb(27, 27, 27),rgb(201, 36, 36));
+    color: white;
+    transform: scaleX(1.1);
+}
+
+h1{
+    color: rgb(212, 0, 0);
+    font-size: 70px;
+    font-family: 'Verdana';   
+}
+
+h6{
+    color: rgb(212, 0, 0);
+    font-size: 60px;
+    font-family: 'Verdana';
+    margin: 0 50px;
+    margin-bottom: 30px;
+}
+
+.birth {
+    font-size: 40px;
+    color: #aaaaaa;
+}
+
+.major {
+    font-size: 30px;
+    color: #aaaaaa;
+    margin: 0px;
+    margin-bottom: 15px;
+}
+
+.topbox h3 {
+    font-size: 30px;
+    color: #aaaaaa;
+}
+
+.test{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.topbox {
+    border-radius: 50px;
+    border: 20px solid rgb(0, 109, 5);
+    width: 30%;
+    margin: 30px;
+}
+
+#education {
+    width: 75%;
+}
+
+#sd h3 {
+    font-size: 25px;
+    color: #aaaaaa;
+}
+
+#smp h3 {
+    font-size: 25px;
+    color: #aaaaaa;
+}
+#sma h3 {
+    font-size: 25px;
+    color: #aaaaaa;
+}
+#ui h3 {
+    font-size: 25px;
+    color: #aaaaaa;
+}
+
+.left  {
+    background-size: 50%;
+    text-align: left;
+}
+
+.right {
+    background-size: 50%;
+    text-align: right;
+}
+
+.block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px 10%;
+}
+
+.sosmedbox {
+    background-image: radial-gradient(#444444ab 50%,rgb(201, 8, 8));
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 10px;
+    padding-top: 5px;
+}
+
+.sosmedbox h1 {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.ssbox {
+    width: 25%;
+    height: 200px;
+    margin: 30px;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.ssbox a {
+    color: rgb(43, 43, 43);
+    text-align: center;
+    text-decoration: none;
+}
+
+.ssbox h2 {
+    font-family: "Arial black";
+    color: rgb(43, 43, 43);
+    font-size: 35px;
+}
+
+.ssbox h3 {
+    font-size: 25px;
+}
+
+.mid {
+    margin-top:50px;
+}
+
+.ssbox:hover {
+    transform: scale(1.23);
+}
+
+#line {
+    background-image: url("line.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#instagram {
+    background-image: url("instagram.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#gmail {
+    background-image: url("gmail.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+@media screen and (max-width: 900px) {
+    .topbox{
+        width: 60%;
+    }
+    .topbox h1 {
+        font-size: 60px;
+    }
+    #smp .left {
+        font-size: 20px;
+    }  
+}
+
+@media screen and (max-width: 785px) {
+    #sd h3{
+        font-size: 20px;
+    }
+    #sd .left {
+        font-size: 17px;
+    }
+    #smp h3{
+        font-size: 20px;
+    }
+    #smp .left {
+        font-size: 16px;
+    }
+    #sma h3{
+        font-size: 20px;
+    }
+    #ui h3{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .ssbox {
+        width: 40%;
+        height: 300px;
+    }
+    .mid {
+        margin-top:70px;
+    }
+    .ssbox h3 {
+        font-size: 35px;
+    }
+    .ssbox h2 {
+        font-size: 40px;
+    }
+    .ssbox h4 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 835px) {
+    .ssbox h4 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 705px) {
+    .ssbox {
+        width: 70%;
+    }
+    .ssbox h4 {
+        font-size: 21px;
+    }
+}
+
+.hbutton {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+}
+
+#bHID {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    text-decoration: underline;
+    color: white;
+    font-family: "Georgia";
+}
+
+.fields {
+    height: 40px;
+    width: 90%;
+}
+
+.submitbutton {
+    background-color: rgb(201, 8, 8);
+    text-decoration: none;
+    border-radius: 10px;
+    border:none;
+    color: white;
+    font-family: "Arial black";
+    font-size: 20px;
+}
+
+.formbutton {
+    float: right;
+    background-color: rgb(201, 8, 8);
+    text-decoration: none;
+    border-radius: 10px;
+    border:none;
+    color: white;
+    font-family: "Arial black";
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.formlink {
+    width: 100%;
+}
+
+.formlink a {
+    margin-top: 10px;
+    color: white;
+}
+
+.cmntbox {
+    color: black;
+    background-color: rgb(209, 209, 209);
+    margin: 20px 60px 20px 40px;
+    padding: 10px 20px;
+}
+.forme {
+    margin : 10px 0 30px 40px;
+}
+
+.cmntbox h3 {
+    margin: 0 20px 0 10px;
+    font-family: "Verdana";
+    font-size: 20px;
+    display: inline-flex;
+}
+
+.rplybox h3 {
+    margin: 0 20px 0 10px;
+    font-family: "Verdana";
+    font-size: 15px;
+    display: inline-flex;
+}
+
+.cmntbox .txt {
+    margin: 5px 20px ;
+    font-family: "calibri";
+    font-size: 19px;
+}
+
+.rplybox .txt {
+    margin: 0 20px;
+    font-family: "calibri";
+    font-size: 15px;
+}
+
+.cmntbox .date {
+    display: inline-flex;
+    float: right;
+    color: rgb(88, 88, 88);
+    margin: 0 20px;
+}
+
+.rplybox .date {
+    display: inline-flex;
+    float: right;
+    color: rgb(88, 88, 88);
+    margin: 0 50px;
+    font-size: 15px;
+}
+
+.rplybox {
+    margin-left: 50px;
+    display:none;
+}
+
+.line {
+    padding: 10px 0;
+    border-top: 0.5px solid rgba(112, 112, 112, 0.507);
+    border-left: 2px solid rgb(104, 104, 104);
+}
+
+.hidden {
+    display:none;
+}
+
+.hidebutt{
+    font-family: "calibri";
+    color: rgb(88, 88, 88);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.friendbox {
+    margin: 30px;
+    width: 250px;
+}
+
+.friendbox a {
+    font-size: 20px;
+    font-family: 'arial Black';
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+.friendbox a p {
+    margin: 0;
+}
+
+.name {
+    font-size: 35px;
+    margin: 0;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.form {
+    background-image: linear-gradient(rgb(190, 8, 8) 0%,rgb(54, 22, 22) 20%);
+    margin: 20px;
+    width: 50%;
+    padding: 20px 30px;
+    border-radius: 20px;
+    min-height: 300px;
+}
+
+.likebox {
+    background-image: linear-gradient(rgb(190, 8, 8) 0%,rgb(54, 22, 22) 20%);
+    margin: 20px;
+    width: 70%;
+    padding: 20px 30px;
+    border-radius: 20px;
+}
+
+.unknown input {
+    height: 30px;
+    width: 100%;
+}
+
+.unknown {
+    width: 60%;
+}
+
+.center { 
+    justify-content: center;
+}
+
+.friendfields {
+    height:30px;
+    width: 50%;
+}
+
+.bigfields {
+    width: 100%;
+}
+
+.datefield {
+    height:30px;
+    margin-left: 10px;
+}
+
+.form form div p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    width: 100%  
+}
+
+.form form div {
+    margin: 10px 0px;
+}
+
+#id_gender {
+    height: 30px;
+}
+
+.form h2 {
+    margin-bottom: 25px;
+    font-family: "Arial Black";
+    font-size: 30px;
+}
+
+.detail h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.detail p {
+    font-family: "arial black";
+    font-size: 30px;
+    margin: 10px 0px;
+}
+
+.bigger {
+    width: 75%;
+}
+
+.animation{
+    transition: 0.3s;
+}
+
+.animation:hover {
+    transform: scale(1.2);
+}
+
+.bg {
+    background-color: rgba(238, 238, 238, 0.822);
+    border-radius: 5px;
+    padding-left: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.padding {
+    padding: 1px 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.adfren {
+    margin-right: 50px;
+    width: 40%;
+    float: right;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap; 
+}
+
+.adfren h5 {
+    font-size: 25px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    
+}
+
+.adfren a {
+    background-color: rgb(201, 8, 8);
+    text-decoration: none;
+    border-radius: 10px;
+    border:none;
+    color: white;
+    font-family: "Arial Black";
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.justatext {
+    color: white;
+    font-size: 35px;
+}
+
+.likebox p {
+    text-align: center;
+    font-family: "consolas";
+    font-size: 20px;
+    width: 100%;
+}
+
+.likebox h {
+    text-align: center;
+    font-family: "consolas";
+    font-size: 72px;
+    width: 100%;
+}
+
+.likebox .smaller {
+    margin: 0 0 40px 0;
+    font-size: 25px;
+}
+
+

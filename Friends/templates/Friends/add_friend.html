@@ -1,0 +1,19 @@
+{% extends 'base_layout.html' %}
+    {% block content%}
+    </div>
+    <div class= 'BlockContent test'>
+        <div class="form">
+            <h2>ADD FRIEND</h2>
+            <form method="POST" action="{% url 'Friends:add_friend' %}">
+                {% csrf_token %}
+                    <div><p>Name</p>{{ form.name }}</div>
+                    <div><p>Gender</p>{{ form.gender }}</div>
+                    <div><p>Birth</p><p>{{ form.birthplace }}
+                    {{ form.birthday }}</p></div>
+                    <div><p>ID LINE</p> {{ form.line }}</div>
+                    <div><p>Description</p>{{ form.desc }}</div>
+                <button type="submit" class='formbutton'>Add Friend</button>
+            </form>
+        </div>
+    </div>
+    {% endblock %}

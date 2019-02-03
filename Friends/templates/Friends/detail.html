@@ -1,0 +1,62 @@
+{% extends 'base_layout.html' %}
+{% load static from staticfiles %}
+    {% block content%}
+    </div>
+    <div class= 'BlockContent test'>
+        <div class="form detail">
+            <center><div class="friendbox">
+                {% if friend.gender == 'Female' %}
+                    <img src="{% static 'female.png' %}" class="avatar">
+                {% else %}
+                    <img src="{% static 'male.png' %}" class="avatar">
+                {% endif %}
+            </div></center>
+            <h1>{{friend.name}}</h1>
+            <div class="test mid">
+                <div class="bigger">
+                    <p>Birth :</p>
+                    <p class="bg">{{friend.birthplace}}, {{friend.birthday.day}} 
+                        {% if friend.birthday.month == 1 %}
+                            January
+                        {% elif friend.birthday.month == 2 %}
+                            Febuary
+                        {% elif friend.birthday.month == 3 %}
+                            March
+                        {% elif friend.birthday.month == 4 %}
+                            April
+                        {% elif friend.birthday.month == 5 %}
+                            May
+                        {% elif friend.birthday.month == 6 %}
+                            June
+                        {% elif friend.birthday.month == 7 %}
+                            July
+                        {% elif friend.birthday.month == 8 %}
+                            August
+                        {% elif friend.birthday.month == 9 %}
+                            September
+                        {% elif friend.birthday.month == 10 %}
+                            October
+                        {% elif friend.birthday.month == 11 %}
+                            November
+                        {% elif friend.birthday.month == 12 %}
+                            December
+                        {% endif %}
+                    {{friend.birthday.year}}</p>
+                </div>
+                <div class="bigger">
+                    <p>Username :</p>
+                    <p class="bg">{{friend.username}}</p>
+                </div>
+                <div class="bigger">
+                    <p>Line :</p>
+                    <p class="bg">{{ friend.line }}</p>
+                </div>
+                <div class="bigger">
+                    <p>Decription :</p>
+                    <p class="bg">{{ friend.desc }}</p>
+                </div>
+            </div>
+            <a class="formbutton padding" href="{% url 'Friends:friend' %}">Back To Friends</a>
+        </div>   
+    </div>
+    {% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+
+    </div>
+    <div class='BlockContent test'>
+        <div class="form">
+            <center><h2>LOGIN</h2></center>
+            <form action="/accounts/login/" method="POST" class="test mid" style="color:white">
+                {% csrf_token %}
+                <div class="unknown"><p>Username</p>{{ form.username }}</div>
+                <div class="unknown"><p>Password</p>{{ form.password }}</div>
+                <div class="unknown test">
+                    {% if request.GET.next %}
+                        <input type="hidden" name="next" value="{{ request.GET.next }}">
+                    {% endif %}
+                    <p class='formlink test'><a href="{% url 'accounts:signup' %}">Don't have an Account? SignUp Here</a></p>
+                    <button type="submit" class="formbutton">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

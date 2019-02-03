@@ -1,0 +1,43 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+
+    </div>
+    <div class='BlockContent test'>
+        <div class="form">
+            <center><h2>SIGNUP</h2></center>
+            <form action="/accounts/signup/" method="POST" class="test mid" style="color:white">
+                {% csrf_token %}
+                <div class="unknown"><p>Username</p>{{ form.username }}</div>
+                <div class="unknown"><p>Password</p>{{ form.password1 }}</div>
+                <div class="unknown"><p>Confirm Password</p>{{ form.password2 }}</div>
+                <div class="unknown">
+                    <p><button id='bHID' onclick="Hide()">Hint</button></p>
+                    <ul id="HID" class="hidden">
+                        <li>Your password can't be too similar to your other personal information.</li>
+                        <li>Your password must contain at least 8 characters.</li>
+                        <li>Your password can't be a commonly used password.</li>
+                        <li>Your password can't be entirely numeric.</li>
+                    </ul>
+                </div>
+                <div class="unknown test">
+                    <p class='formlink test'><a href="{% url 'accounts:login' %}">Already have an Account? LogIn Here</a></p>
+                    <button type="submit" class="formbutton">Signup</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function Hide() {
+            if (document.getElementById('HID').style.display=="block") {
+                document.getElementById('bHID').innerHTML='Hint';
+                document.getElementById('HID').style.display='none';
+            }
+
+            else {
+            document.getElementById('bHID').innerHTML='Hide';
+            document.getElementById('HID').style.display='block';
+            }
+        }
+        </script>
+{% endblock %}

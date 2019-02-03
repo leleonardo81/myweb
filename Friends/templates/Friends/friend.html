@@ -1,0 +1,30 @@
+{% extends 'base_layout.html' %}
+{% load static from staticfiles %}
+    {% block content%}
+    </div>
+    <div class= 'BlockContent'>
+        {% if not already %}
+            <div class="adfren">
+                <h5>Are You My Friend?</h5>
+                <a class="padding" href="{% url 'Friends:add_friend' %}">Add Friend</a>
+            </div>
+        {% endif %}
+        <h6>My Friends</h6>
+        <div class="test">
+        {% for frnd in friend %}
+            <div class="friendbox animation">
+                <a href="{% url 'Friends:detail' slug=frnd.username %}">
+                    <p>
+                    {% if frnd.gender == 'Female' %}
+                        <img src="{% static 'female.png' %}" class="avatar">
+                    {% else %}
+                        <img src="{% static 'male.png' %}" class="avatar">
+                    {% endif %}
+                    </p>
+                    <p class="name">{{frnd.name}}</p>
+                    <p>{{frnd.username}}</p></a>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+    {% endblock %}

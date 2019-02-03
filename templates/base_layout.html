@@ -1,0 +1,55 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Leonardo</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet"  href="{% static 'style.css' %}">
+    </head>
+    <body>
+        <div class="topnav">
+            {% if user.is_authenticated %}
+            <form action="/accounts/logout/" method="POST">
+                {% csrf_token %}
+                <a><button type="submit" class='hbutton'>Logout</button></a>
+            </form>
+            <a href="{% url 'Friends:add_friend' %}">{{ request.user }}</a>
+            {% else %}
+            <a href="{% url 'accounts:login' %}">Login</a>
+            {% endif %}
+            <a href="{% url 'Friends:friend' %}">Friends</a>
+            <a href="/comment">Comment</a>
+            <a href="{% url 'HomePage:homepage' %}">HOME</a>
+            
+            {% block content%}
+            {% endblock %}
+
+            <div class="sosmedbox" id="sosmed">
+                <h1>Follow Me</h1>
+                <div class="ssbox" id="line">
+                    <div class="mid">
+                        <a href="https://line.me/en-US/" target="_blank">
+                            <h2><b>Line</b></h2>
+                            <h3>ID : leonardo2000</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="ssbox" id="instagram">
+                    <div class="mid">
+                        <a href="https://www.instagram.com/leonardo7820/" target="_blank">
+                            <h2><b>Instagram</b></h2>
+                            <h3>@leonardo7820</h3>
+                        </a>                    
+                    </div>
+                </div>
+                <div class="ssbox" id="gmail">
+                    <div class="mid">
+                        <a href="https://www.gmail.com/" target="_blank">
+                            <h2><b>Gmail</b></h2>
+                            <h4>leonardoeinstein2000@gmail.com</h4>
+                        </a>
+                    </div>
+                </div>    
+            </div>  
+        </body>
+    </html>
