@@ -1,3 +1,4 @@
+python==3.*
 django==2.1.*
 gunicorn
 oauth2client
