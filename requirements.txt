@@ -5,4 +5,4 @@ datetime
 whitenoise==3.3.0
 django-cors-headers
 django-heroku
-django-user
+django-auth_user
