@@ -2,10 +2,5 @@ django==2.1.*
 gunicorn
 oauth2client
 datetime
-whitenoise==3.3.0
-django-cors-headers
 django-heroku
-django-user
-django-comment
-django-friends
-django-accounts
+django-auth
