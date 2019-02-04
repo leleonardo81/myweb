@@ -1,1 +1,1 @@
-web: gunicorn leonardoprofile.wsgi
+web: gunicorn MyWeb.wsgi
