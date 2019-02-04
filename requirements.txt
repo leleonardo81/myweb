@@ -3,6 +3,3 @@ gunicorn
 oauth2client
 datetime
 django-heroku
-django-auth
-django-contrib
-django-form
