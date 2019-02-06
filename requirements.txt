@@ -3,3 +3,4 @@ gunicorn
 oauth2client
 datetime
 django-heroku
+psycopg2-binary
